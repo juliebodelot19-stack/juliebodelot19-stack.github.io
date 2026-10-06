@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lunes de Saturne et images Cassini · Julie Bodelot</title>
+  <meta name="description" content="Stage de 2e année à l'Observatoire de Paris (IMCCE) : traitement d'images astronomiques de la mission Cassini avec le logiciel Arago.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="logo mono" href="../index-fr.html">JB<span>/</span>AERO</a>
+    <nav class="nav">
+      <a href="../index-fr.html#projets">Projets</a>
+      <a href="../index-fr.html#parcours">Parcours</a>
+      <a href="../index-fr.html#taiwan">Taïwan</a>
+      <a href="../index-fr.html#basket">Basket</a>
+      <a href="../index-fr.html#contact" class="nav-cta">Contact</a>
+    </nav>
+    <a class="lang-switch mono" href="observatoire.html" hreflang="en" lang="en">EN</a>
+    <span class="coords mono" id="coords" aria-hidden="true">X 0000 · Y 0000</span>
+  </header>
+
+  <aside class="altimeter mono" aria-hidden="true">
+    <span>ALT</span>
+    <div class="alt-track"><div class="alt-fill" id="altFill"></div></div>
+    <span id="altValue">00000 ft</span>
+  </aside>
+
+  <main class="case">
+    <!-- ================= EN-TÊTE ================= -->
+    <section class="wrap case-hero">
+      <a class="back mono" href="../index-fr.html#projets">← RETOUR AUX PLANCHES</a>
+      <p class="mono kicker">PL. 02 · STAGE DE RECHERCHE 2E ANNÉE · JUIN – JUIL. 2024</p>
+      <h1 class="case-title">Identifier les lunes de Saturne dans les images de Cassini</h1>
+      <p class="subtitle case-sub">Traitement d'images astronomiques issues de la sonde Cassini, au sein de l'Institut de mécanique céleste et de calcul des éphémérides.</p>
+
+      <dl class="factsheet mono">
+        <div><dt>LABORATOIRE</dt><dd>Observatoire de Paris · IMCCE</dd></div>
+        <div><dt>ENCADREMENT</dt><dd>Valery Lainey, astronome</dd></div>
+        <div><dt>PÉRIODE</dt><dd>Juin – juillet 2024</dd></div>
+        <div><dt>OUTIL</dt><dd>Arago · catalogue Gaia · NASA PDS</dd></div>
+      </dl>
+
+      <figure class="case-figure space-figure reveal">
+        <img src="../assets/projets/observatoire/cassini-lunes-anneaux.jpg" alt="Image de la sonde Cassini : deux lunes de Saturne devant les anneaux" loading="eager">
+        <figcaption class="mono">Deux lunes de Saturne devant les anneaux, photographiées par la sonde Cassini. © NASA / JPL-Caltech / Space Science Institute</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= LE SUJET ================= -->
+    <section class="section wrap case-block">
+      <div class="case-grid reveal">
+        <header>
+          <p class="mono section-num">01 · LE SUJET</p>
+          <h2>Retrouver des lunes dans les archives d'une sonde</h2>
+        </header>
+        <div class="prose">
+          <p>La mission <strong>Cassini</strong> a photographié Saturne et ses satellites pendant des années. Ces images, disponibles dans les archives de la NASA, sont une mine d'informations pour étudier le mouvement des lunes.</p>
+          <p>Mon rôle : analyser un grand nombre de ces images avec <strong>Arago</strong>, un logiciel développé au laboratoire, pour localiser précisément plusieurs petites lunes (Prométhée, Pandore, Janus, Épiméthée, Atlas).</p>
+          <p>Ce travail manuel sert de référence pour évaluer un algorithme de détection automatique, développé dans le cadre d'une thèse.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DÉMARCHE ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">02 · LA DÉMARCHE</p>
+        <h2>De l'image brute à la position d'une lune</h2>
+      </header>
+      <ol class="pipeline pipeline-3 reveal">
+        <li>
+          <span class="step mono">ÉTAPE 1</span>
+          <h3>Correction de pointage</h3>
+          <p>Détecter les étoiles dans l'image et les faire correspondre au catalogue Gaia, pour connaître exactement l'orientation de la caméra.</p>
+        </li>
+        <li>
+          <span class="step mono">ÉTAPE 2</span>
+          <h3>Astrométrie des satellites</h3>
+          <p>Choisir un modèle de forme pour la lune, détecter son contour puis ajuster ce contour pour en déterminer le centre avec précision.</p>
+        </li>
+        <li>
+          <span class="step mono">ÉTAPE 3</span>
+          <h3>Données de référence</h3>
+          <p>Convertir et enregistrer chaque image traitée, pour constituer une base de comparaison fiable avec la détection automatique.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= IMAGES ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">03 · EN IMAGES</p>
+        <h2>Au cœur du traitement</h2>
+      </header>
+      <div class="figpair reveal">
+        <figure class="case-figure">
+          <img src="../assets/projets/observatoire/arago-astrometrie.jpg" alt="Capture d'Arago : identification des lunes Épiméthée et Atlas près des anneaux de Saturne" loading="lazy" style="object-position: left center">
+          <figcaption class="mono">Identification d'Épiméthée et d'Atlas près des anneaux, parmi les étoiles du catalogue.</figcaption>
+        </figure>
+        <figure class="case-figure">
+          <img src="../assets/projets/observatoire/cassini-saturne-lune.jpg" alt="Image de la sonde Cassini : une lune de Saturne en contre-jour devant les anneaux" loading="lazy">
+          <figcaption class="mono">Une des images Cassini traitées. © NASA / JPL-Caltech / Space Science Institute</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= L'OBSERVATOIRE ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">04 · L'OBSERVATOIRE</p>
+        <h2>Six semaines dans le monde de la recherche</h2>
+        <p>Visite des coupoles de Paris et de Meudon, des laboratoires d'horloges atomiques, séminaires de l'IMCCE et échanges avec des chercheurs et des doctorants sur leurs travaux et leurs parcours.</p>
+      </header>
+      <div class="gallery reveal">
+        <figure><img src="../assets/projets/observatoire/coupole-lunette.jpg" alt="Lunette astronomique sous une coupole de l'Observatoire de Paris" loading="lazy"><figcaption class="mono">Coupole · Paris</figcaption></figure>
+        <figure><img src="../assets/projets/observatoire/toit-observatoire.jpg" alt="Coupole blanche sur le toit de l'Observatoire de Paris" loading="lazy"><figcaption class="mono">Le toit · Paris</figcaption></figure>
+        <figure><img src="../assets/projets/observatoire/meudon-grande-coupole.jpg" alt="Grande coupole de l'Observatoire de Meudon" loading="lazy"><figcaption class="mono">Grande coupole · Meudon</figcaption></figure>
+        <figure><img src="../assets/projets/observatoire/labo-horloges.jpg" alt="Laboratoire des horloges atomiques" loading="lazy"><figcaption class="mono">Labo horloges atomiques</figcaption></figure>
+      </div>
+      <p class="mono photo-credit">Photos : Julie Bodelot</p>
+    </section>
+
+    <!-- ================= COMPÉTENCES ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">05 · COMPÉTENCES ACQUISES</p>
+        <h2>Ce que ce stage m'a appris</h2>
+      </header>
+      <div class="ideas ideas-3 reveal">
+        <article class="panel">
+          <h3>Traitement d'images</h3>
+          <p>Manipuler des images scientifiques brutes : recalage, détection de sources, ajustement de contours.</p>
+        </article>
+        <article class="panel">
+          <h3>Astrométrie</h3>
+          <p>Utiliser un catalogue d'étoiles de référence et des éphémérides pour positionner précisément un objet céleste.</p>
+        </article>
+        <article class="panel">
+          <h3>Rigueur</h3>
+          <p>Traiter un grand volume d'images sans relâcher la précision, puisque mon travail sert de référence à d'autres analyses.</p>
+        </article>
+        <article class="panel">
+          <h3>Prise en main d'un outil de recherche</h3>
+          <p>Apprendre rapidement un logiciel scientifique spécialisé, avec l'aide des chercheurs qui l'ont développé.</p>
+        </article>
+        <article class="panel">
+          <h3>Culture scientifique</h3>
+          <p>Découvrir la mécanique céleste, la métrologie du temps et les grands projets de l'Observatoire.</p>
+        </article>
+        <article class="panel">
+          <h3>Initiative</h3>
+          <p>Trouver ce stage par moi-même, en contactant directement un astronome, et m'intégrer dans une équipe de recherche.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= OUTILS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">06 · OUTILS UTILISÉS</p>
+        <h2>Outils</h2>
+      </header>
+      <div class="tools reveal">
+        <div class="tool"><span class="mono tool-name">Arago</span><span>Logiciel Python d'astrométrie d'images spatiales développé à l'Observatoire de Paris : correction de pointage, astrométrie des satellites</span></div>
+        <div class="tool"><span class="mono tool-name">Catalogue Gaia</span><span>Étoiles de référence pour le recalage des images</span></div>
+        <div class="tool"><span class="mono tool-name">NASA PDS</span><span>Archives des images de la mission Cassini (Planetary Data System)</span></div>
+      </div>
+    </section>
+
+    <!-- ================= CONCLUSION ================= -->
+    <section class="section wrap case-block">
+      <div class="takeaway reveal">
+        <p class="mono section-num">07 · EN CONCLUSION</p>
+        <p class="lead">Ce stage a été ma première immersion dans un laboratoire de recherche. Au-delà de l'outil, j'y ai appris la <strong>rigueur</strong> qu'exige une donnée scientifique et l'importance des échanges au sein d'une équipe.</p>
+        <p class="lead">Les rencontres avec les chercheurs et les doctorants ont renforcé ma curiosité pour le spatial et pour la recherche.</p>
+        <p class="pub-note mono">Ce travail a contribué à l'article « Arago: advanced Python software for space astrometry » (E. Pitavy, V. Lainey et al.), soumis à <em>Astronomy &amp; Astrophysics</em>.</p>
+      </div>
+    </section>
+
+    <nav class="wrap case-nav mono">
+      <a href="nexteam-fr.html">← Planche précédente</a>
+      <a href="cfd-naca-fr.html">Planche suivante →</a>
+    </nav>
+  </main>
+
+  <footer class="footer wrap mono">
+    <span>© 2026 Julie Bodelot</span>
+    <span>PL. 02 · OBSERVATOIRE DE PARIS · RÉV. A</span>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

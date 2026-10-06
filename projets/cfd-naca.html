@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CFD simulation: cylinder and NACA 0015 · Julie Bodelot</title>
+  <meta name="description" content="Aerodynamics lab at IPSA: CFD simulation in STAR-CCM+ of the flow around a cylinder and a NACA 0015 airfoil.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="logo mono" href="../index.html">JB<span>/</span>AERO</a>
+    <nav class="nav">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#journey">Journey</a>
+      <a href="../index.html#taiwan">Taiwan</a>
+      <a href="../index.html#basketball">Basketball</a>
+      <a href="../index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+    <a class="lang-switch mono" href="cfd-naca-fr.html" hreflang="fr" lang="fr">FR</a>
+    <span class="coords mono" id="coords" aria-hidden="true">X 0000 · Y 0000</span>
+  </header>
+
+  <aside class="altimeter mono" aria-hidden="true">
+    <span>ALT</span>
+    <div class="alt-track"><div class="alt-fill" id="altFill"></div></div>
+    <span id="altValue">00000 ft</span>
+  </aside>
+
+  <main class="case">
+    <!-- ================= HEADER ================= -->
+    <section class="wrap case-hero">
+      <a class="back mono" href="../index.html#projects">← BACK TO PROJECTS</a>
+      <p class="mono kicker">SH. 03 · SCHOOL PROJECT · 3RD YEAR · 2025</p>
+      <h1 class="case-title">CFD simulation: cylinder &amp; NACA 0015 airfoil</h1>
+      <p class="subtitle case-sub">Numerically reproducing a wind tunnel experiment in STAR-CCM+ to study the flow and aerodynamic loads around two reference geometries.</p>
+
+      <dl class="factsheet mono">
+        <div><dt>CONTEXT</dt><dd>Aerodynamics lab · IPSA</dd></div>
+        <div><dt>YEAR</dt><dd>3rd year · Aerospace Vehicles track</dd></div>
+        <div><dt>TYPE</dt><dd>3D incompressible flow</dd></div>
+        <div><dt>TOOL</dt><dd>Simcenter STAR-CCM+</dd></div>
+      </dl>
+
+      <figure class="case-figure natural-figure reveal">
+        <img src="../assets/projets/cfd-naca/pression-paroi-aile.png" alt="Pressure distribution on the surface of a NACA 0015 wing, simulated in STAR-CCM+" loading="eager">
+        <figcaption class="mono">Pressure distribution on the surface of the NACA 0015 wing.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= THE TOPIC ================= -->
+    <section class="section wrap case-block">
+      <div class="case-grid reveal">
+        <header>
+          <p class="mono section-num">01 · THE TOPIC</p>
+          <h2>A numerical wind tunnel</h2>
+        </header>
+        <div class="prose">
+          <p>The goal of this lab: reproduce in STAR-CCM+ the exact conditions of a wind tunnel test (geometry, dimensions, speeds), so that the simulation can be compared with experimental measurements.</p>
+          <p>Two cases were studied: a <strong>cylinder</strong> placed in the flow at several speeds, then a <strong>NACA 0015 airfoil</strong>, whose angle of attack was increased up to stall.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= APPROACH ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">02 · THE APPROACH</p>
+        <h2>The complete CFD workflow</h2>
+      </header>
+      <ol class="pipeline reveal">
+        <li>
+          <span class="step mono">STEP 1</span>
+          <h3>Geometry</h3>
+          <p>Build the fluid domain to the dimensions of the test section and subtract the body under study.</p>
+        </li>
+        <li>
+          <span class="step mono">STEP 2</span>
+          <h3>Meshing</h3>
+          <p>Define the regions and boundary conditions, then generate and check the domain mesh.</p>
+        </li>
+        <li>
+          <span class="step mono">STEP 3</span>
+          <h3>Physics</h3>
+          <p>Incompressible, steady and turbulent airflow, with the k-ε turbulence model.</p>
+        </li>
+        <li>
+          <span class="step mono">STEP 4</span>
+          <h3>Post-processing</h3>
+          <p>Velocity and pressure fields, vectors, convergence monitoring and aerodynamic coefficients.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= IMAGES ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">03 · IN PICTURES</p>
+        <h2>From mesh to flow</h2>
+      </header>
+      <div class="figpair reveal">
+        <figure class="case-figure">
+          <img src="../assets/projets/cfd-naca/maillage-domaine.png" alt="Mesh of the computational domain around the NACA 0015 wing" loading="lazy">
+          <figcaption class="mono">Mesh of the computational domain around the wing.</figcaption>
+        </figure>
+        <figure class="case-figure">
+          <img src="../assets/projets/cfd-naca/vitesse-plan-vertical.png" alt="Velocity field around the NACA 0015 airfoil on a cutting plane" loading="lazy">
+          <figcaption class="mono">Velocity field around the airfoil, on a cutting plane.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">04 · SKILLS GAINED</p>
+        <h2>What this project taught me</h2>
+      </header>
+      <div class="ideas ideas-3 reveal">
+        <article class="panel">
+          <h3>Setting up a CFD case</h3>
+          <p>Going through every step of a simulation: geometry, meshing, physics, solving and post-processing.</p>
+        </article>
+        <article class="panel">
+          <h3>Boundary conditions</h3>
+          <p>Translating a real experiment into a numerical model: inlet, outlet, walls and choice of physical assumptions.</p>
+        </article>
+        <article class="panel">
+          <h3>Meshing</h3>
+          <p>Configuring a mesher and checking mesh quality before running the calculation.</p>
+        </article>
+        <article class="panel">
+          <h3>Convergence</h3>
+          <p>Monitoring residuals and coefficients over the iterations to judge how reliable a calculation is.</p>
+        </article>
+        <article class="panel">
+          <h3>Airfoil aerodynamics</h3>
+          <p>Linking velocity and pressure fields to lift and drag, and studying the effect of the angle of attack.</p>
+        </article>
+        <article class="panel">
+          <h3>Critical thinking</h3>
+          <p>Keeping in mind that a simulation must always be compared with experiment or theory to be validated.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= TOOLS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">05 · SOFTWARE USED</p>
+        <h2>Tools</h2>
+      </header>
+      <div class="tools reveal">
+        <div class="tool"><span class="mono tool-name">Simcenter STAR-CCM+</span><span>CAD modelling of the domain, meshing, physics setup, solving and post-processing (scenes, cutting planes, coefficient reports)</span></div>
+      </div>
+    </section>
+
+    <!-- ================= CONCLUSION ================= -->
+    <section class="section wrap case-block">
+      <div class="takeaway reveal">
+        <p class="mono section-num">06 · CONCLUSION</p>
+        <p class="lead">This project was my first real hands-on experience with <strong>CFD</strong>: understanding every step of a calculation, from geometry to the physical interpretation of the results.</p>
+        <p class="lead">These foundations then served me directly during my 4th-year internship, where I used STAR-CCM+ on a much more complex case: the downwash of a helicopter rotor.</p>
+      </div>
+    </section>
+
+    <nav class="wrap case-nav mono">
+      <a href="observatoire.html">← Previous project</a>
+      <a href="patran-nastran.html">Next project →</a>
+    </nav>
+  </main>
+
+  <footer class="footer wrap mono">
+    <span>© 2026 Julie Bodelot</span>
+    <span>SH. 03 · CFD · REV. A</span>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

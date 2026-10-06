@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Structural analysis with Patran / Nastran · Julie Bodelot</title>
+  <meta name="description" content="Series of finite element labs in Patran/Nastran at IPSA: beams, plate with a hole, 3D part and thermal analysis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="logo mono" href="../index.html">JB<span>/</span>AERO</a>
+    <nav class="nav">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#journey">Journey</a>
+      <a href="../index.html#taiwan">Taiwan</a>
+      <a href="../index.html#basketball">Basketball</a>
+      <a href="../index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+    <a class="lang-switch mono" href="patran-nastran-fr.html" hreflang="fr" lang="fr">FR</a>
+    <span class="coords mono" id="coords" aria-hidden="true">X 0000 · Y 0000</span>
+  </header>
+
+  <aside class="altimeter mono" aria-hidden="true">
+    <span>ALT</span>
+    <div class="alt-track"><div class="alt-fill" id="altFill"></div></div>
+    <span id="altValue">00000 ft</span>
+  </aside>
+
+  <main class="case">
+    <!-- ================= HEADER ================= -->
+    <section class="wrap case-hero">
+      <a class="back mono" href="../index.html#projects">← BACK TO PROJECTS</a>
+      <p class="mono kicker">SH. 04 · LAB SERIES · 4TH YEAR · 2026</p>
+      <h1 class="case-title">Finite element structural analysis with Patran / Nastran</h1>
+      <p class="subtitle case-sub">Four labs to master the finite element method, from a 1D beam to a 3D part, through to thermal analysis. Always with the same rule: validate the numerical result against an analytical calculation.</p>
+
+      <dl class="factsheet mono">
+        <div><dt>CONTEXT</dt><dd>Computational structural mechanics · IPSA</dd></div>
+        <div><dt>YEAR</dt><dd>4th year · Mechanics &amp; Structures track</dd></div>
+        <div><dt>FORMAT</dt><dd>4 labs in pairs · reports in English</dd></div>
+        <div><dt>TOOLS</dt><dd>Patran · Nastran</dd></div>
+      </dl>
+
+      <figure class="case-figure reveal">
+        <img src="../assets/projets/patran-nastran/piece-hex20-von-mises.png" alt="3D part meshed with hexahedral elements in Patran, showing the von Mises stress distribution around the bore" loading="eager">
+        <figcaption class="mono">3D part meshed with hexahedra (Hex20): von Mises stresses around the bore.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= THE TOPIC ================= -->
+    <section class="section wrap case-block">
+      <div class="case-grid reveal">
+        <header>
+          <p class="mono section-num">01 · THE TOPIC</p>
+          <h2>Four cases, one method</h2>
+        </header>
+        <div class="prose">
+          <p>Each lab tackles a different type of modelling, with increasingly complex structures. Each time, the finite element model is built from scratch: geometry, mesh, material, loads and boundary conditions.</p>
+          <p>The numerical results are then <strong>systematically compared with analytical calculations</strong> or a reference model, to understand where discrepancies come from and judge how reliable the model is.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= THE 4 LABS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">02 · THE LABS</p>
+        <h2>From beams to heat transfer</h2>
+      </header>
+      <ol class="pipeline reveal">
+        <li>
+          <span class="step mono">LAB 1</span>
+          <h3>Beam in tension and bending</h3>
+          <p>Linear static analysis of a hollow beam: tension, bending, self-weight and the superposition principle.</p>
+        </li>
+        <li>
+          <span class="step mono">LAB 2</span>
+          <h3>Plate with a hole</h3>
+          <p>Stress concentration around a hole, influence of mesh refinement and modelling using symmetry.</p>
+        </li>
+        <li>
+          <span class="step mono">LAB 3</span>
+          <h3>3D part</h3>
+          <p>Comparison of four types of solid elements (Hex8, Hex20, Tet4, Tet10) against a very fine reference model.</p>
+        </li>
+        <li>
+          <span class="step mono">LAB 4</span>
+          <h3>Thermal analysis</h3>
+          <p>Thermal expansion of a cylinder, then conduction and convection through multilayer walls, in 1D and 3D.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= IMAGES ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">03 · IN PICTURES</p>
+        <h2>Meshes and stress fields</h2>
+      </header>
+      <div class="figpair reveal">
+        <figure class="case-figure">
+          <img src="../assets/projets/patran-nastran/plaque-trouee.png" alt="Plate with a hole in tension: stress concentration around the hole in Patran" loading="lazy">
+          <figcaption class="mono">LAB 2 · Plate with a hole in tension: stress concentration around the hole.</figcaption>
+        </figure>
+        <figure class="case-figure">
+          <img src="../assets/projets/patran-nastran/piece-tet4.png" alt="3D part meshed with tetrahedra in Patran, displacement field" loading="lazy">
+          <figcaption class="mono">LAB 3 · The same part meshed with tetrahedra (Tet4).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">04 · SKILLS GAINED</p>
+        <h2>What these labs taught me</h2>
+      </header>
+      <div class="ideas ideas-3 reveal">
+        <article class="panel">
+          <h3>Finite element modelling</h3>
+          <p>Building a complete model in Patran: geometry, properties, loads, boundary conditions, then solving with Nastran.</p>
+        </article>
+        <article class="panel">
+          <h3>Element selection</h3>
+          <p>Choosing between 1D, 2D and 3D elements, linear or quadratic, knowing their strengths and limits.</p>
+        </article>
+        <article class="panel">
+          <h3>Meshing &amp; convergence</h3>
+          <p>Refining where gradients are steep and checking that the solution no longer depends on the mesh.</p>
+        </article>
+        <article class="panel">
+          <h3>Analytical validation</h3>
+          <p>Comparing every result with strength of materials or theory, and explaining where discrepancies come from.</p>
+        </article>
+        <article class="panel">
+          <h3>Computational efficiency</h3>
+          <p>Using symmetry and simplifying a model (3D to 1D) to reduce cost without losing accuracy.</p>
+        </article>
+        <article class="panel">
+          <h3>Thermomechanics</h3>
+          <p>Modelling conduction, convection and thermally induced stresses in a structure.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= TOOLS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">05 · SOFTWARE USED</p>
+        <h2>Tools</h2>
+      </header>
+      <div class="tools reveal">
+        <div class="tool"><span class="mono tool-name">Patran</span><span>Pre- and post-processing: geometry, meshing, material properties, loads, results visualisation</span></div>
+        <div class="tool"><span class="mono tool-name">Nastran</span><span>Finite element solver: linear static and thermal analyses</span></div>
+      </div>
+    </section>
+
+    <!-- ================= CONCLUSION ================= -->
+    <section class="section wrap case-block">
+      <div class="takeaway reveal">
+        <p class="mono section-num">06 · CONCLUSION</p>
+        <p class="lead">These labs gave me solid foundations in <strong>finite element structural analysis</strong>, and above all a reflex: never trust a numerical result without checking it.</p>
+        <p class="lead">They also taught me to find the right balance between accuracy and computational cost, by choosing the element type, mesh density and modelling level suited to each problem.</p>
+      </div>
+    </section>
+
+    <nav class="wrap case-nav mono">
+      <a href="cfd-naca.html">← Previous project</a>
+      <a href="catia-epee.html">Next project →</a>
+    </nav>
+  </main>
+
+  <footer class="footer wrap mono">
+    <span>© 2026 Julie Bodelot</span>
+    <span>SH. 04 · PATRAN / NASTRAN · REV. A</span>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

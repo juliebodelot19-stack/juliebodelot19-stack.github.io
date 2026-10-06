@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calcul de structures sous Patran / Nastran · Julie Bodelot</title>
+  <meta name="description" content="Série de travaux pratiques de calcul par éléments finis sous Patran/Nastran à l'IPSA : poutres, plaque trouée, pièce 3D et thermique.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="logo mono" href="../index-fr.html">JB<span>/</span>AERO</a>
+    <nav class="nav">
+      <a href="../index-fr.html#projets">Projets</a>
+      <a href="../index-fr.html#parcours">Parcours</a>
+      <a href="../index-fr.html#taiwan">Taïwan</a>
+      <a href="../index-fr.html#basket">Basket</a>
+      <a href="../index-fr.html#contact" class="nav-cta">Contact</a>
+    </nav>
+    <a class="lang-switch mono" href="patran-nastran.html" hreflang="en" lang="en">EN</a>
+    <span class="coords mono" id="coords" aria-hidden="true">X 0000 · Y 0000</span>
+  </header>
+
+  <aside class="altimeter mono" aria-hidden="true">
+    <span>ALT</span>
+    <div class="alt-track"><div class="alt-fill" id="altFill"></div></div>
+    <span id="altValue">00000 ft</span>
+  </aside>
+
+  <main class="case">
+    <!-- ================= EN-TÊTE ================= -->
+    <section class="wrap case-hero">
+      <a class="back mono" href="../index-fr.html#projets">← RETOUR AUX PLANCHES</a>
+      <p class="mono kicker">PL. 04 · SÉRIE DE TP · 4E ANNÉE · 2026</p>
+      <h1 class="case-title">Calcul de structures par éléments finis sous Patran / Nastran</h1>
+      <p class="subtitle case-sub">Quatre travaux pratiques pour maîtriser la méthode des éléments finis, de la poutre 1D à la pièce 3D, jusqu'à l'analyse thermique. Toujours avec la même règle : valider le calcul numérique par le calcul analytique.</p>
+
+      <dl class="factsheet mono">
+        <div><dt>CADRE</dt><dd>Calcul numérique en mécanique des structures · IPSA</dd></div>
+        <div><dt>ANNÉE</dt><dd>4e année · filière Mécanique &amp; Structure</dd></div>
+        <div><dt>FORMAT</dt><dd>4 TP en binôme · rapports en anglais</dd></div>
+        <div><dt>OUTILS</dt><dd>Patran · Nastran</dd></div>
+      </dl>
+
+      <figure class="case-figure reveal">
+        <img src="../assets/projets/patran-nastran/piece-hex20-von-mises.png" alt="Pièce 3D maillée en éléments hexaédriques sous Patran, avec la répartition des contraintes de von Mises autour de l'alésage" loading="eager">
+        <figcaption class="mono">Pièce 3D maillée en hexaèdres (Hex20) : contraintes de von Mises autour de l'alésage.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= LE SUJET ================= -->
+    <section class="section wrap case-block">
+      <div class="case-grid reveal">
+        <header>
+          <p class="mono section-num">01 · LE SUJET</p>
+          <h2>Quatre cas, une même méthode</h2>
+        </header>
+        <div class="prose">
+          <p>Chaque TP aborde un type de modélisation différent, avec des structures de plus en plus complexes. À chaque fois, le modèle éléments finis est construit de A à Z : géométrie, maillage, matériau, chargements et conditions aux limites.</p>
+          <p>Les résultats numériques sont ensuite <strong>systématiquement confrontés au calcul analytique</strong> ou à un modèle de référence, pour comprendre d'où viennent les écarts et juger de la fiabilité du modèle.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LES 4 TP ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">02 · LES TRAVAUX PRATIQUES</p>
+        <h2>De la poutre à la thermique</h2>
+      </header>
+      <ol class="pipeline reveal">
+        <li>
+          <span class="step mono">TP 1</span>
+          <h3>Poutre en traction et flexion</h3>
+          <p>Analyse statique linéaire d'une poutre creuse : traction, flexion, poids propre et principe de superposition.</p>
+        </li>
+        <li>
+          <span class="step mono">TP 2</span>
+          <h3>Plaque trouée</h3>
+          <p>Concentration de contraintes autour d'un trou, influence du raffinement du maillage et modélisation par symétrie.</p>
+        </li>
+        <li>
+          <span class="step mono">TP 3</span>
+          <h3>Pièce 3D</h3>
+          <p>Comparaison de quatre types d'éléments volumiques (Hex8, Hex20, Tet4, Tet10) face à un modèle de référence très fin.</p>
+        </li>
+        <li>
+          <span class="step mono">TP 4</span>
+          <h3>Analyse thermique</h3>
+          <p>Dilatation thermique d'un cylindre, puis conduction et convection à travers des parois multicouches, en 1D et en 3D.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= IMAGES ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">03 · EN IMAGES</p>
+        <h2>Maillages et champs de contraintes</h2>
+      </header>
+      <div class="figpair reveal">
+        <figure class="case-figure">
+          <img src="../assets/projets/patran-nastran/plaque-trouee.png" alt="Plaque trouée en traction : concentration de contraintes autour du trou sous Patran" loading="lazy">
+          <figcaption class="mono">TP 2 · Plaque trouée en traction : concentration de contraintes autour du trou.</figcaption>
+        </figure>
+        <figure class="case-figure">
+          <img src="../assets/projets/patran-nastran/piece-tet4.png" alt="Pièce 3D maillée en tétraèdres sous Patran, champ de déplacement" loading="lazy">
+          <figcaption class="mono">TP 3 · La même pièce maillée en tétraèdres (Tet4).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= COMPÉTENCES ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">04 · COMPÉTENCES ACQUISES</p>
+        <h2>Ce que ces TP m'ont appris</h2>
+      </header>
+      <div class="ideas ideas-3 reveal">
+        <article class="panel">
+          <h3>Modélisation éléments finis</h3>
+          <p>Construire un modèle complet sous Patran : géométrie, propriétés, chargements, conditions aux limites, puis calcul sous Nastran.</p>
+        </article>
+        <article class="panel">
+          <h3>Choix des éléments</h3>
+          <p>Choisir entre éléments 1D, 2D et 3D, linéaires ou quadratiques, en connaissant leurs forces et leurs limites.</p>
+        </article>
+        <article class="panel">
+          <h3>Maillage &amp; convergence</h3>
+          <p>Raffiner là où les gradients sont forts et vérifier que la solution ne dépend plus du maillage.</p>
+        </article>
+        <article class="panel">
+          <h3>Validation analytique</h3>
+          <p>Confronter chaque résultat à la RDM ou à la théorie, et expliquer l'origine des écarts.</p>
+        </article>
+        <article class="panel">
+          <h3>Optimisation du calcul</h3>
+          <p>Exploiter les symétries et simplifier un modèle (3D vers 1D) pour réduire le coût sans perdre en précision.</p>
+        </article>
+        <article class="panel">
+          <h3>Thermomécanique</h3>
+          <p>Modéliser la conduction, la convection et les contraintes d'origine thermique dans une structure.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= OUTILS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">05 · LOGICIELS UTILISÉS</p>
+        <h2>Outils</h2>
+      </header>
+      <div class="tools reveal">
+        <div class="tool"><span class="mono tool-name">Patran</span><span>Pré- et post-traitement : géométrie, maillage, propriétés matériau, chargements, visualisation des résultats</span></div>
+        <div class="tool"><span class="mono tool-name">Nastran</span><span>Solveur éléments finis : analyses statiques linéaires et thermiques</span></div>
+      </div>
+    </section>
+
+    <!-- ================= CONCLUSION ================= -->
+    <section class="section wrap case-block">
+      <div class="takeaway reveal">
+        <p class="mono section-num">06 · EN CONCLUSION</p>
+        <p class="lead">Ces travaux pratiques m'ont donné des bases solides en <strong>calcul de structures par éléments finis</strong>, et surtout un réflexe : ne jamais faire confiance à un résultat numérique sans l'avoir vérifié.</p>
+        <p class="lead">Ils m'ont aussi appris à trouver le bon compromis entre précision et coût de calcul, en choisissant le type d'élément, la finesse du maillage et le niveau de modélisation adaptés à chaque problème.</p>
+      </div>
+    </section>
+
+    <nav class="wrap case-nav mono">
+      <a href="cfd-naca-fr.html">← Planche précédente</a>
+      <a href="catia-epee-fr.html">Planche suivante →</a>
+    </nav>
+  </main>
+
+  <footer class="footer wrap mono">
+    <span>© 2026 Julie Bodelot</span>
+    <span>PL. 04 · PATRAN / NASTRAN · RÉV. A</span>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

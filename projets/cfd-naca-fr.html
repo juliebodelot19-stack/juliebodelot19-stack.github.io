@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulation CFD cylindre et NACA 0015 · Julie Bodelot</title>
+  <meta name="description" content="Travaux pratiques d'aérodynamique à l'IPSA : simulation CFD sous STAR-CCM+ de l'écoulement autour d'un cylindre et d'un profil NACA 0015.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="logo mono" href="../index-fr.html">JB<span>/</span>AERO</a>
+    <nav class="nav">
+      <a href="../index-fr.html#projets">Projets</a>
+      <a href="../index-fr.html#parcours">Parcours</a>
+      <a href="../index-fr.html#taiwan">Taïwan</a>
+      <a href="../index-fr.html#basket">Basket</a>
+      <a href="../index-fr.html#contact" class="nav-cta">Contact</a>
+    </nav>
+    <a class="lang-switch mono" href="cfd-naca.html" hreflang="en" lang="en">EN</a>
+    <span class="coords mono" id="coords" aria-hidden="true">X 0000 · Y 0000</span>
+  </header>
+
+  <aside class="altimeter mono" aria-hidden="true">
+    <span>ALT</span>
+    <div class="alt-track"><div class="alt-fill" id="altFill"></div></div>
+    <span id="altValue">00000 ft</span>
+  </aside>
+
+  <main class="case">
+    <!-- ================= EN-TÊTE ================= -->
+    <section class="wrap case-hero">
+      <a class="back mono" href="../index-fr.html#projets">← RETOUR AUX PLANCHES</a>
+      <p class="mono kicker">PL. 03 · PROJET ÉCOLE · 3E ANNÉE · 2025</p>
+      <h1 class="case-title">Simulation CFD : cylindre &amp; profil NACA 0015</h1>
+      <p class="subtitle case-sub">Reproduire numériquement une expérience de soufflerie sous STAR-CCM+ pour étudier l'écoulement et les efforts aérodynamiques autour de deux géométries de référence.</p>
+
+      <dl class="factsheet mono">
+        <div><dt>CADRE</dt><dd>TP d'aérodynamique · IPSA</dd></div>
+        <div><dt>ANNÉE</dt><dd>3e année · filière Véhicules aérospatiaux</dd></div>
+        <div><dt>TYPE</dt><dd>Écoulement 3D incompressible</dd></div>
+        <div><dt>OUTIL</dt><dd>Simcenter STAR-CCM+</dd></div>
+      </dl>
+
+      <figure class="case-figure natural-figure reveal">
+        <img src="../assets/projets/cfd-naca/pression-paroi-aile.png" alt="Répartition de pression sur la paroi d'une aile de profil NACA 0015, simulée sous STAR-CCM+" loading="eager">
+        <figcaption class="mono">Répartition de pression sur la paroi de l'aile NACA 0015.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= LE SUJET ================= -->
+    <section class="section wrap case-block">
+      <div class="case-grid reveal">
+        <header>
+          <p class="mono section-num">01 · LE SUJET</p>
+          <h2>Une soufflerie numérique</h2>
+        </header>
+        <div class="prose">
+          <p>L'objectif de ces travaux pratiques : reproduire dans STAR-CCM+ les conditions exactes d'un essai en soufflerie (géométrie, dimensions, vitesses), pour pouvoir confronter la simulation aux mesures expérimentales.</p>
+          <p>Deux cas ont été étudiés : un <strong>cylindre</strong> placé dans l'écoulement, à plusieurs vitesses, puis un <strong>profil d'aile NACA 0015</strong>, dont on fait varier l'angle d'incidence jusqu'au décrochage.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DÉMARCHE ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">02 · LA DÉMARCHE</p>
+        <h2>La chaîne complète d'un calcul CFD</h2>
+      </header>
+      <ol class="pipeline reveal">
+        <li>
+          <span class="step mono">ÉTAPE 1</span>
+          <h3>Géométrie</h3>
+          <p>Construire le domaine fluide aux dimensions de la veine d'essai et y soustraire le corps étudié.</p>
+        </li>
+        <li>
+          <span class="step mono">ÉTAPE 2</span>
+          <h3>Maillage</h3>
+          <p>Définir les régions et les conditions aux limites, puis générer et contrôler le maillage du domaine.</p>
+        </li>
+        <li>
+          <span class="step mono">ÉTAPE 3</span>
+          <h3>Physique</h3>
+          <p>Écoulement d'air incompressible, stationnaire et turbulent, avec le modèle de turbulence k-ε.</p>
+        </li>
+        <li>
+          <span class="step mono">ÉTAPE 4</span>
+          <h3>Post-traitement</h3>
+          <p>Champs de vitesse et de pression, vecteurs, suivi de convergence et coefficients aérodynamiques.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= IMAGES ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">03 · EN IMAGES</p>
+        <h2>Du maillage à l'écoulement</h2>
+      </header>
+      <div class="figpair reveal">
+        <figure class="case-figure">
+          <img src="../assets/projets/cfd-naca/maillage-domaine.png" alt="Maillage du domaine de calcul autour de l'aile NACA 0015" loading="lazy">
+          <figcaption class="mono">Maillage du domaine de calcul autour de l'aile.</figcaption>
+        </figure>
+        <figure class="case-figure">
+          <img src="../assets/projets/cfd-naca/vitesse-plan-vertical.png" alt="Champ de vitesse autour du profil NACA 0015 sur un plan de coupe" loading="lazy">
+          <figcaption class="mono">Champ de vitesse autour du profil, sur un plan de coupe.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= COMPÉTENCES ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">04 · COMPÉTENCES ACQUISES</p>
+        <h2>Ce que ce projet m'a appris</h2>
+      </header>
+      <div class="ideas ideas-3 reveal">
+        <article class="panel">
+          <h3>Mettre en place un calcul CFD</h3>
+          <p>Enchaîner toutes les étapes d'une simulation : géométrie, maillage, physique, résolution et post-traitement.</p>
+        </article>
+        <article class="panel">
+          <h3>Conditions aux limites</h3>
+          <p>Traduire une expérience réelle en modèle numérique : entrée, sortie, parois et choix des hypothèses physiques.</p>
+        </article>
+        <article class="panel">
+          <h3>Maillage</h3>
+          <p>Paramétrer un mailleur et vérifier la qualité du maillage avant de lancer le calcul.</p>
+        </article>
+        <article class="panel">
+          <h3>Convergence</h3>
+          <p>Suivre les résidus et les coefficients au fil des itérations pour juger de la fiabilité d'un calcul.</p>
+        </article>
+        <article class="panel">
+          <h3>Aérodynamique du profil</h3>
+          <p>Relier les champs de vitesse et de pression à la portance et à la traînée, et étudier l'effet de l'incidence.</p>
+        </article>
+        <article class="panel">
+          <h3>Esprit critique</h3>
+          <p>Garder en tête qu'une simulation doit toujours être confrontée à l'expérience ou à la théorie pour être validée.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= OUTILS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">05 · LOGICIEL UTILISÉ</p>
+        <h2>Outils</h2>
+      </header>
+      <div class="tools reveal">
+        <div class="tool"><span class="mono tool-name">Simcenter STAR-CCM+</span><span>Modélisation CAO du domaine, maillage, définition de la physique, résolution et post-traitement (scènes, plans de coupe, rapports de coefficients)</span></div>
+      </div>
+    </section>
+
+    <!-- ================= CONCLUSION ================= -->
+    <section class="section wrap case-block">
+      <div class="takeaway reveal">
+        <p class="mono section-num">06 · EN CONCLUSION</p>
+        <p class="lead">Ce projet a été ma première vraie prise en main de la <strong>CFD</strong> : comprendre chaque étape d'un calcul, de la géométrie à l'interprétation physique des résultats.</p>
+        <p class="lead">Ces bases m'ont ensuite servi directement lors de mon stage de 4e année, où j'ai utilisé STAR-CCM+ sur un cas bien plus complexe : le souffle d'un rotor d'hélicoptère.</p>
+      </div>
+    </section>
+
+    <nav class="wrap case-nav mono">
+      <a href="observatoire-fr.html">← Planche précédente</a>
+      <a href="patran-nastran-fr.html">Planche suivante →</a>
+    </nav>
+  </main>
+
+  <footer class="footer wrap mono">
+    <span>© 2026 Julie Bodelot</span>
+    <span>PL. 03 · CFD · RÉV. A</span>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

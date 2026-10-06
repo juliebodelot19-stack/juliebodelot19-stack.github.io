@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saturn's moons and Cassini images · Julie Bodelot</title>
+  <meta name="description" content="2nd-year research internship at the Paris Observatory (IMCCE): processing astronomical images from the Cassini mission with the Arago software.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="logo mono" href="../index.html">JB<span>/</span>AERO</a>
+    <nav class="nav">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#journey">Journey</a>
+      <a href="../index.html#taiwan">Taiwan</a>
+      <a href="../index.html#basketball">Basketball</a>
+      <a href="../index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+    <a class="lang-switch mono" href="observatoire-fr.html" hreflang="fr" lang="fr">FR</a>
+    <span class="coords mono" id="coords" aria-hidden="true">X 0000 · Y 0000</span>
+  </header>
+
+  <aside class="altimeter mono" aria-hidden="true">
+    <span>ALT</span>
+    <div class="alt-track"><div class="alt-fill" id="altFill"></div></div>
+    <span id="altValue">00000 ft</span>
+  </aside>
+
+  <main class="case">
+    <!-- ================= HEADER ================= -->
+    <section class="wrap case-hero">
+      <a class="back mono" href="../index.html#projects">← BACK TO PROJECTS</a>
+      <p class="mono kicker">SH. 02 · 2ND-YEAR RESEARCH INTERNSHIP · JUNE – JULY 2024</p>
+      <h1 class="case-title">Identifying Saturn's moons in Cassini images</h1>
+      <p class="subtitle case-sub">Processing astronomical images from the Cassini spacecraft at the Institute of Celestial Mechanics and Ephemeris Calculation (IMCCE).</p>
+
+      <dl class="factsheet mono">
+        <div><dt>LABORATORY</dt><dd>Paris Observatory · IMCCE</dd></div>
+        <div><dt>SUPERVISOR</dt><dd>Valery Lainey, astronomer</dd></div>
+        <div><dt>PERIOD</dt><dd>June – July 2024</dd></div>
+        <div><dt>TOOLS</dt><dd>Arago · Gaia catalogue · NASA PDS</dd></div>
+      </dl>
+
+      <figure class="case-figure space-figure reveal">
+        <img src="../assets/projets/observatoire/cassini-lunes-anneaux.jpg" alt="Cassini spacecraft image: two of Saturn's moons in front of the rings" loading="eager">
+        <figcaption class="mono">Two of Saturn's moons in front of the rings, photographed by the Cassini spacecraft. © NASA / JPL-Caltech / Space Science Institute</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= THE TOPIC ================= -->
+    <section class="section wrap case-block">
+      <div class="case-grid reveal">
+        <header>
+          <p class="mono section-num">01 · THE TOPIC</p>
+          <h2>Finding moons in a spacecraft's archives</h2>
+        </header>
+        <div class="prose">
+          <p>The <strong>Cassini</strong> mission photographed Saturn and its satellites for years. These images, available in NASA's archives, are a goldmine for studying the motion of the moons.</p>
+          <p>My role: analyse a large number of these images with <strong>Arago</strong>, software developed at the laboratory, to precisely locate several small moons (Prometheus, Pandora, Janus, Epimetheus, Atlas).</p>
+          <p>This manual work serves as a reference to evaluate an automatic detection algorithm developed as part of a PhD.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= APPROACH ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">02 · THE APPROACH</p>
+        <h2>From raw image to a moon's position</h2>
+      </header>
+      <ol class="pipeline pipeline-3 reveal">
+        <li>
+          <span class="step mono">STEP 1</span>
+          <h3>Pointing correction</h3>
+          <p>Detect the stars in the image and match them to the Gaia catalogue, to know the camera's exact orientation.</p>
+        </li>
+        <li>
+          <span class="step mono">STEP 2</span>
+          <h3>Satellite astrometry</h3>
+          <p>Choose a shape model for the moon, detect its limb, then fit this contour to determine its centre precisely.</p>
+        </li>
+        <li>
+          <span class="step mono">STEP 3</span>
+          <h3>Reference data</h3>
+          <p>Convert and save each processed image to build a reliable comparison base for automatic detection.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= IMAGES ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">03 · IN PICTURES</p>
+        <h2>Inside the processing</h2>
+      </header>
+      <div class="figpair reveal">
+        <figure class="case-figure">
+          <img src="../assets/projets/observatoire/arago-astrometrie.jpg" alt="Arago screenshot: identifying the moons Epimetheus and Atlas near Saturn's rings" loading="lazy" style="object-position: left center">
+          <figcaption class="mono">Identifying Epimetheus and Atlas near the rings, among the catalogue stars.</figcaption>
+        </figure>
+        <figure class="case-figure">
+          <img src="../assets/projets/observatoire/cassini-saturne-lune.jpg" alt="Cassini spacecraft image: a backlit moon of Saturn in front of the rings" loading="lazy">
+          <figcaption class="mono">One of the processed Cassini images. © NASA / JPL-Caltech / Space Science Institute</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= THE OBSERVATORY ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">04 · THE OBSERVATORY</p>
+        <h2>Six weeks in the world of research</h2>
+        <p>Visits to the Paris and Meudon domes and the atomic clock laboratories, IMCCE seminars, and discussions with researchers and PhD students about their work and career paths.</p>
+      </header>
+      <div class="gallery reveal">
+        <figure><img src="../assets/projets/observatoire/coupole-lunette.jpg" alt="Astronomical refractor under a dome at the Paris Observatory" loading="lazy"><figcaption class="mono">Dome · Paris</figcaption></figure>
+        <figure><img src="../assets/projets/observatoire/toit-observatoire.jpg" alt="White dome on the roof of the Paris Observatory" loading="lazy"><figcaption class="mono">The roof · Paris</figcaption></figure>
+        <figure><img src="../assets/projets/observatoire/meudon-grande-coupole.jpg" alt="Great dome of the Meudon Observatory" loading="lazy"><figcaption class="mono">Great dome · Meudon</figcaption></figure>
+        <figure><img src="../assets/projets/observatoire/labo-horloges.jpg" alt="Atomic clock laboratory" loading="lazy"><figcaption class="mono">Atomic clock lab</figcaption></figure>
+      </div>
+      <p class="mono photo-credit">Photos: Julie Bodelot</p>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">05 · SKILLS GAINED</p>
+        <h2>What this internship taught me</h2>
+      </header>
+      <div class="ideas ideas-3 reveal">
+        <article class="panel">
+          <h3>Image processing</h3>
+          <p>Handling raw scientific images: registration, source detection, contour fitting.</p>
+        </article>
+        <article class="panel">
+          <h3>Astrometry</h3>
+          <p>Using a reference star catalogue and ephemerides to precisely position a celestial object.</p>
+        </article>
+        <article class="panel">
+          <h3>Rigour</h3>
+          <p>Processing a large volume of images without losing precision, since my work serves as a reference for other analyses.</p>
+        </article>
+        <article class="panel">
+          <h3>Learning a research tool</h3>
+          <p>Quickly getting to grips with specialised scientific software, with help from the researchers who developed it.</p>
+        </article>
+        <article class="panel">
+          <h3>Scientific culture</h3>
+          <p>Discovering celestial mechanics, time metrology and the Observatory's major projects.</p>
+        </article>
+        <article class="panel">
+          <h3>Initiative</h3>
+          <p>Finding this internship myself by contacting an astronomer directly, and fitting into a research team.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= TOOLS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">06 · TOOLS USED</p>
+        <h2>Tools</h2>
+      </header>
+      <div class="tools reveal">
+        <div class="tool"><span class="mono tool-name">Arago</span><span>Python software for space image astrometry developed at the Paris Observatory: pointing correction, satellite astrometry</span></div>
+        <div class="tool"><span class="mono tool-name">Gaia catalogue</span><span>Reference stars for image registration</span></div>
+        <div class="tool"><span class="mono tool-name">NASA PDS</span><span>Archive of Cassini mission images (Planetary Data System)</span></div>
+      </div>
+    </section>
+
+    <!-- ================= CONCLUSION ================= -->
+    <section class="section wrap case-block">
+      <div class="takeaway reveal">
+        <p class="mono section-num">07 · CONCLUSION</p>
+        <p class="lead">This internship was my first immersion in a research laboratory. Beyond the tool itself, I learned the <strong>rigour</strong> that scientific data demands and the importance of exchanges within a team.</p>
+        <p class="lead">Meeting researchers and PhD students strengthened my curiosity for space and for research.</p>
+        <p class="pub-note mono">This work contributed to the paper "Arago: advanced Python software for space astrometry" (E. Pitavy, V. Lainey et al.), submitted to <em>Astronomy &amp; Astrophysics</em>.</p>
+      </div>
+    </section>
+
+    <nav class="wrap case-nav mono">
+      <a href="nexteam.html">← Previous project</a>
+      <a href="cfd-naca.html">Next project →</a>
+    </nav>
+  </main>
+
+  <footer class="footer wrap mono">
+    <span>© 2026 Julie Bodelot</span>
+    <span>SH. 02 · PARIS OBSERVATORY · REV. A</span>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
