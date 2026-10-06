@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parametric fencing épée in CATIA · Julie Bodelot</title>
+  <meta name="description" content="CAD project at IPSA: designing a fully parametric fencing épée in CATIA V5 (Shape Design, Knowledgeware, parameter-driven assembly).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="logo mono" href="../index-en.html">JB<span>/</span>AERO</a>
+    <nav class="nav">
+      <a href="../index-en.html#projects">Projects</a>
+      <a href="../index-en.html#journey">Journey</a>
+      <a href="../index-en.html#taiwan">Taiwan</a>
+      <a href="../index-en.html#basketball">Basketball</a>
+      <a href="../index-en.html#contact" class="nav-cta">Contact</a>
+    </nav>
+    <a class="lang-switch mono" href="catia-epee.html" hreflang="fr" lang="fr">FR</a>
+    <span class="coords mono" id="coords" aria-hidden="true">X 0000 · Y 0000</span>
+  </header>
+
+  <aside class="altimeter mono" aria-hidden="true">
+    <span>ALT</span>
+    <div class="alt-track"><div class="alt-fill" id="altFill"></div></div>
+    <span id="altValue">00000 ft</span>
+  </aside>
+
+  <main class="case">
+    <!-- ================= HEADER ================= -->
+    <section class="wrap case-hero">
+      <a class="back mono" href="../index-en.html#projects">← BACK TO PROJECTS</a>
+      <p class="mono kicker">SH. 05 · CAD PROJECT · 4TH YEAR · 2026</p>
+      <h1 class="case-title">A fully parametric fencing épée in CATIA</h1>
+      <p class="subtitle case-sub">Designing a single CAD model able to generate every version of an épée: regulation size, right- or left-handed, grip type, electric or non-electric.</p>
+
+      <dl class="factsheet mono">
+        <div><dt>CONTEXT</dt><dd>CATIA parametric design module · IPSA</dd></div>
+        <div><dt>TEAM</dt><dd>Group project of 4</dd></div>
+        <div><dt>MY CONTRIBUTION</dt><dd>Complex surface parts in Shape Design</dd></div>
+        <div><dt>TOOL</dt><dd>CATIA V5</dd></div>
+      </dl>
+
+      <figure class="case-figure catia-figure reveal">
+        <img src="../assets/projets/catia-epee/epee-assemblee.png" alt="Complete assembly of the fencing épée modelled in CATIA" loading="eager">
+        <figcaption class="mono">The assembled épée in CATIA, electric configuration.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= THE TOPIC ================= -->
+    <section class="section wrap case-block">
+      <div class="case-grid reveal">
+        <header>
+          <p class="mono section-num">01 · THE TOPIC</p>
+          <h2>A made-to-measure weapon, a single file</h2>
+        </header>
+        <div class="prose">
+          <p>In fencing, weapon dimensions are strictly regulated by the International Fencing Federation, but every fencer has their own preferences: hand, grip shape, blade type, electric or "dry" fencing.</p>
+          <p>Rather than drawing each version separately, the goal was to create <strong>a single, smart model</strong>: you choose your options and the whole épée updates automatically, while staying compliant with the rules.</p>
+          <p>A real industrial use case: allowing a manufacturer to offer a personalised, made-to-measure weapon.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= APPROACH ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">02 · THE APPROACH</p>
+        <h2>From part to parameter-driven assembly</h2>
+      </header>
+      <ol class="pipeline reveal">
+        <li>
+          <span class="step mono">STEP 1</span>
+          <h3>Breakdown</h3>
+          <p>Break the épée down into parts (blade, guard, grips, pommel, electrical contact…) and define the parameters of each.</p>
+        </li>
+        <li>
+          <span class="step mono">STEP 2</span>
+          <h3>Modelling</h3>
+          <p>Part Design for mechanical parts, Generative Shape Design for complex shapes: multi-section surfaces, thickening.</p>
+        </li>
+        <li>
+          <span class="step mono">STEP 3</span>
+          <h3>Parameterisation</h3>
+          <p>Knowledgeware formulas, rules and checks in each part, so that it adapts on its own to the chosen parameters.</p>
+        </li>
+        <li>
+          <span class="step mono">STEP 4</span>
+          <h3>Driven assembly</h3>
+          <p>Everything is controlled from the assembly through external parameters and a configuration table linked to Excel.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= IMAGES ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">03 · IN PICTURES</p>
+        <h2>Parts with complex shapes</h2>
+      </header>
+      <div class="gallery gallery-3 catia-gallery reveal">
+        <figure><img src="../assets/projets/catia-epee/garde.png" alt="Épée guard modelled with surfaces in CATIA" loading="lazy"><figcaption class="mono">The guard · Shape Design</figcaption></figure>
+        <figure><img src="../assets/projets/catia-epee/poignee-orthopedique.png" alt="Orthopaedic grip modelled in CATIA" loading="lazy"><figcaption class="mono">The orthopaedic grip</figcaption></figure>
+        <figure><img src="../assets/projets/catia-epee/bout-de-lame.png" alt="Tip of the variable-section blade in CATIA" loading="lazy"><figcaption class="mono">The variable-section blade</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">04 · SKILLS GAINED</p>
+        <h2>What this project taught me</h2>
+      </header>
+      <div class="ideas ideas-3 reveal">
+        <article class="panel">
+          <h3>Surface modelling</h3>
+          <p>Creating smooth, complex shapes in Generative Shape Design: guide profiles, multi-section surfaces, conversion to solids.</p>
+        </article>
+        <article class="panel">
+          <h3>Parametric design</h3>
+          <p>Driving geometry with parameters and ratios rather than fixed dimensions, to keep realistic proportions.</p>
+        </article>
+        <article class="panel">
+          <h3>Knowledgeware</h3>
+          <p>Writing formulas, activation rules and checks to automate the model and secure the values entered.</p>
+        </article>
+        <article class="panel">
+          <h3>Driven assembly</h3>
+          <p>Passing parameters from the assembly down to the parts and managing contacts between parts as the geometry changes.</p>
+        </article>
+        <article class="panel">
+          <h3>Teamwork</h3>
+          <p>Standardising our design methods so that parts modelled separately work together.</p>
+        </article>
+        <article class="panel">
+          <h3>Time management</h3>
+          <p>Running an ambitious project alongside a busy semester, by focusing on what matters most.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= TOOLS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">05 · SOFTWARE USED</p>
+        <h2>Tools</h2>
+      </header>
+      <div class="tools reveal">
+        <div class="tool"><span class="mono tool-name">CATIA · Part Design</span><span>Mechanical parts: pads, shafts, pockets, threads</span></div>
+        <div class="tool"><span class="mono tool-name">CATIA · Shape Design</span><span>Complex shapes: guard, orthopaedic grip, variable-section blade</span></div>
+        <div class="tool"><span class="mono tool-name">CATIA · Knowledge Advisor</span><span>Parameters, formulas, rules and checks</span></div>
+        <div class="tool"><span class="mono tool-name">CATIA · Assembly Design</span><span>Assembly, constraints and external parameters</span></div>
+        <div class="tool"><span class="mono tool-name">Excel</span><span>Configuration table linked to CATIA to generate the variants</span></div>
+      </div>
+    </section>
+
+    <!-- ================= CONCLUSION ================= -->
+    <section class="section wrap case-block">
+      <div class="takeaway reveal">
+        <p class="mono section-num">06 · CONCLUSION</p>
+        <p class="lead">This project brought together everything I had learned about CATIA during my studies, and took it further with <strong>parametric design</strong>: moving from a drawn part to a model that adapts on its own.</p>
+        <p class="lead">Above all, it strengthened my surface modelling skills and taught me how to design a complete, consistent product as a team.</p>
+      </div>
+    </section>
+
+    <nav class="wrap case-nav mono">
+      <a href="patran-nastran-en.html">← Previous project</a>
+      <a href="pmi-air-france-en.html">Next project →</a>
+    </nav>
+  </main>
+
+  <footer class="footer wrap mono">
+    <span>© 2026 Julie Bodelot</span>
+    <span>SH. 05 · CATIA · REV. A</span>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

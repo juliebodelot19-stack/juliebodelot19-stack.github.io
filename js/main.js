@@ -5,7 +5,7 @@ const PROJECTS_EN = [
   {
     id: 'nexteam',
     featured: true,
-    page: 'projets/nexteam.html',
+    page: 'projets/nexteam-en.html',
     thumb: 'assets/projets/nexteam/coupes-champ-cfd.png',
     tags: ['cfd'],
     kind: 'ENGINEERING INTERNSHIP · 4TH YEAR',
@@ -16,7 +16,7 @@ const PROJECTS_EN = [
   },
   {
     id: 'observatoire',
-    page: 'projets/observatoire.html',
+    page: 'projets/observatoire-en.html',
     thumb: 'assets/projets/observatoire/cassini-lunes-anneaux.jpg',
     tags: ['research'],
     kind: 'RESEARCH INTERNSHIP · 2ND YEAR',
@@ -27,7 +27,7 @@ const PROJECTS_EN = [
   },
   {
     id: 'naca',
-    page: 'projets/cfd-naca.html',
+    page: 'projets/cfd-naca-en.html',
     thumb: 'assets/projets/cfd-naca/pression-paroi-aile.png',
     thumbContain: true,
     tags: ['cfd'],
@@ -39,7 +39,7 @@ const PROJECTS_EN = [
   },
   {
     id: 'nastran',
-    page: 'projets/patran-nastran.html',
+    page: 'projets/patran-nastran-en.html',
     thumb: 'assets/projets/patran-nastran/piece-hex20-von-mises.png',
     tags: ['structures'],
     kind: 'LAB SERIES · FINITE ELEMENTS',
@@ -50,7 +50,7 @@ const PROJECTS_EN = [
   },
   {
     id: 'catia',
-    page: 'projets/catia-epee.html',
+    page: 'projets/catia-epee-en.html',
     thumb: 'assets/projets/catia-epee/epee-assemblee.png',
     thumbContain: true,
     thumbBg: '#3b3b6e',
@@ -63,7 +63,7 @@ const PROJECTS_EN = [
   },
   {
     id: 'pmi',
-    page: 'projets/pmi-air-france.html',
+    page: 'projets/pmi-air-france-en.html',
     tags: ['project'],
     art: 'app',
     kind: 'FINAL-YEAR PROJECT · IN PROGRESS',
@@ -90,7 +90,7 @@ const PROJECTS_FR = [
   {
     id: 'nexteam',
     featured: true,
-    page: 'projets/nexteam-fr.html',
+    page: 'projets/nexteam.html',
     thumb: 'assets/projets/nexteam/coupes-champ-cfd.png',
     tags: ['cfd'],
     kind: 'STAGE INGÉNIEUR · 4E ANNÉE',
@@ -101,7 +101,7 @@ const PROJECTS_FR = [
   },
   {
     id: 'observatoire',
-    page: 'projets/observatoire-fr.html',
+    page: 'projets/observatoire.html',
     thumb: 'assets/projets/observatoire/cassini-lunes-anneaux.jpg',
     tags: ['research'],
     kind: 'STAGE DE RECHERCHE · 2E ANNÉE',
@@ -112,7 +112,7 @@ const PROJECTS_FR = [
   },
   {
     id: 'naca',
-    page: 'projets/cfd-naca-fr.html',
+    page: 'projets/cfd-naca.html',
     thumb: 'assets/projets/cfd-naca/pression-paroi-aile.png',
     thumbContain: true,
     tags: ['cfd'],
@@ -124,7 +124,7 @@ const PROJECTS_FR = [
   },
   {
     id: 'nastran',
-    page: 'projets/patran-nastran-fr.html',
+    page: 'projets/patran-nastran.html',
     thumb: 'assets/projets/patran-nastran/piece-hex20-von-mises.png',
     tags: ['structures'],
     kind: 'SÉRIE DE TP · ÉLÉMENTS FINIS',
@@ -135,7 +135,7 @@ const PROJECTS_FR = [
   },
   {
     id: 'catia',
-    page: 'projets/catia-epee-fr.html',
+    page: 'projets/catia-epee.html',
     thumb: 'assets/projets/catia-epee/epee-assemblee.png',
     thumbContain: true,
     thumbBg: '#3b3b6e',
@@ -148,7 +148,7 @@ const PROJECTS_FR = [
   },
   {
     id: 'pmi',
-    page: 'projets/pmi-air-france-fr.html',
+    page: 'projets/pmi-air-france.html',
     tags: ['project'],
     art: 'app',
     kind: 'PROJET DE FIN D’ÉTUDES · EN COURS',
