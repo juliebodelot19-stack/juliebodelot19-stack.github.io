@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Réorganiser un parc d'outillage · Julie Bodelot</title>
+  <meta name="description" content="Projet de gestion de projet à l'IPSA : réorganiser le parc d'outillage d'un site de maintenance moteur (5M, 5S, Lean, diagramme de Gantt).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="logo mono" href="../index.html">JB<span>/</span>AERO</a>
+    <nav class="nav">
+      <a href="../index.html#projets">Projets</a>
+      <a href="../index.html#parcours">Parcours</a>
+      <a href="../index.html#taiwan">Taïwan</a>
+      <a href="../index.html#basket">Basket</a>
+      <a href="../index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+    <a class="lang-switch mono" href="gestion-outillage-en.html" hreflang="en" lang="en">EN</a>
+    <span class="coords mono" id="coords" aria-hidden="true">X 0000 · Y 0000</span>
+  </header>
+
+  <aside class="altimeter mono" aria-hidden="true">
+    <span>ALT</span>
+    <div class="alt-track"><div class="alt-fill" id="altFill"></div></div>
+    <span id="altValue">00000 ft</span>
+  </aside>
+
+  <main class="case">
+    <!-- ================= EN-TÊTE ================= -->
+    <section class="wrap case-hero">
+      <a class="back mono" href="../index.html#projets">← RETOUR AUX PLANCHES</a>
+      <p class="mono kicker">PL. 07 · PROJET ÉCOLE · GESTION DE PROJET</p>
+      <h1 class="case-title">Réorganiser le parc d'outillage d'un site de maintenance moteur</h1>
+      <p class="subtitle case-sub">Un cas d'étude inspiré de la maintenance moteur d'Air France Industries : désengorger les ateliers, fiabiliser la gestion des outillages et soutenir la croissance de l'activité.</p>
+
+      <dl class="factsheet mono">
+        <div><dt>CADRE</dt><dd>Cours de gestion de projet · IPSA</dd></div>
+        <div><dt>CAS D'ÉTUDE</dt><dd>Maintenance moteur · Air France Industries</dd></div>
+        <div><dt>ÉQUIPE</dt><dd>Projet en groupe de 6</dd></div>
+        <div><dt>MÉTHODES</dt><dd>5M · 5S · Lean · Gantt</dd></div>
+      </dl>
+
+      <figure class="case-figure natural-figure reveal">
+        <img src="../assets/projets/gestion-outillage/gantt.png" alt="Diagramme de Gantt du projet, découpé en cinq lots : initialisation, planification, conception, mise en œuvre et clôture" loading="eager">
+        <figcaption class="mono">Le diagramme de Gantt du projet : cinq lots, leurs tâches, leurs dépendances et les jalons (triangles rouges).</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= PROBLÉMATIQUE ================= -->
+    <section class="section wrap case-block">
+      <div class="case-grid reveal">
+        <header>
+          <p class="mono section-num">01 · LA PROBLÉMATIQUE</p>
+          <h2>Des ateliers saturés par l'outillage</h2>
+        </header>
+        <div class="prose">
+          <p>Sur le site de maintenance moteur, un parc d'outillage énorme encombre les zones de production, bien au-delà de leur capacité. Beaucoup d'outils sont perdus, hors service ou obsolètes, et les informations de suivi sont souvent fausses.</p>
+          <p>Conséquences : du temps perdu à chercher les outils, des chantiers moteur stoppés faute d'outillage ou de place, et des zones de travail figées. Le tout alors que l'activité doit fortement augmenter, avec de nouveaux types de moteurs à accueillir.</p>
+          <p>Notre mission : proposer et planifier un projet pour <strong>réorganiser l'outillage et redonner de la productivité au site</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DIAGNOSTIC ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">02 · LE DIAGNOSTIC</p>
+        <h2>Les causes, avec la méthode 5M</h2>
+      </header>
+      <div class="ideas ideas-3 reveal">
+        <article class="panel">
+          <h3>Milieu</h3>
+          <p>Un espace insuffisant : l'outillage occupe les zones de production, qui ne sont plus flexibles.</p>
+        </article>
+        <article class="panel">
+          <h3>Moyens</h3>
+          <p>Aucun système d'information fiable pour savoir où se trouve un outil et dans quel état il est.</p>
+        </article>
+        <article class="panel">
+          <h3>Méthodes</h3>
+          <p>Pas de standards ni de mode opératoire partagé : un processus de mise à disposition lourd et défaillant.</p>
+        </article>
+        <article class="panel">
+          <h3>Main d'œuvre</h3>
+          <p>Un manque de rigueur dans l'utilisation et le rangement des outils.</p>
+        </article>
+        <article class="panel">
+          <h3>Matière</h3>
+          <p>Des outillages défectueux, hors service ou obsolètes, mélangés aux outils opérationnels.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= SOLUTION ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">03 · LA SOLUTION</p>
+        <h2>Garder l'essentiel à portée de main, stocker le reste</h2>
+        <p>Le principe : les outils les plus utilisés restent dans l'atelier, tous les autres rejoignent un magasin dédié dans un bâtiment libre, et sont livrés à la demande.</p>
+      </header>
+      <div class="ideas reveal">
+        <article class="panel">
+          <h3>Un magasin dédié</h3>
+          <p>Créer un magasin dans un autre bâtiment pour libérer les zones de production, en exploitant la hauteur pour optimiser l'espace.</p>
+        </article>
+        <article class="panel">
+          <h3>Inventaire &amp; 5S</h3>
+          <p>Faire l'inventaire complet de l'outillage et le trier par état : opérationnel, hors service, à recycler. Puis réorganiser les zones avec la méthode 5S.</p>
+        </article>
+        <article class="panel">
+          <h3>Un système de suivi</h3>
+          <p>Créer un système d'information pour connaître l'emplacement et l'état de chaque outil, et anticiper les besoins de chaque chantier.</p>
+        </article>
+        <article class="panel">
+          <h3>La livraison à la demande</h3>
+          <p>Le matin, chaque mécanicien commande sur une application les outils de sa journée. Le magasin prépare la commande, un prestataire la livre au poste, et les outils reviennent le soir.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= DÉMARCHE ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">04 · LA DÉMARCHE</p>
+        <h2>Un projet découpé en cinq lots</h2>
+      </header>
+      <ol class="milestones reveal">
+        <li class="is-done">
+          <span class="ms-state mono">LOT 1</span>
+          <h3>Initialisation</h3>
+          <p>Définir les problématiques et les objectifs, valider le périmètre, créer les livrables initiaux.</p>
+        </li>
+        <li class="is-done">
+          <span class="ms-state mono">LOT 2</span>
+          <h3>Planification</h3>
+          <p>Structurer l'équipe, définir les lots et les jalons, mettre en place les outils.</p>
+        </li>
+        <li class="is-done">
+          <span class="ms-state mono">LOT 3</span>
+          <h3>Conception</h3>
+          <p>Inventaire de l'outillage, cartographie du processus actuel, conception du système d'information.</p>
+        </li>
+        <li class="is-done">
+          <span class="ms-state mono">LOT 4</span>
+          <h3>Mise en œuvre</h3>
+          <p>Réorganisation 5S, déploiement du système en phase test, aménagement du magasin.</p>
+        </li>
+        <li class="is-done">
+          <span class="ms-state mono">LOT 5</span>
+          <h3>Clôture</h3>
+          <p>Analyse des indicateurs, validation des solutions, bilan final et communication.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= COMPÉTENCES ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">05 · COMPÉTENCES ACQUISES</p>
+        <h2>Ce que ce projet m'a appris</h2>
+      </header>
+      <div class="ideas ideas-3 reveal">
+        <article class="panel">
+          <h3>Cadrer un projet</h3>
+          <p>Passer d'un constat à une problématique claire, puis à des objectifs mesurables.</p>
+        </article>
+        <article class="panel">
+          <h3>Analyser les causes</h3>
+          <p>Remonter aux causes profondes d'un dysfonctionnement avec la méthode 5M.</p>
+        </article>
+        <article class="panel">
+          <h3>Lean &amp; 5S</h3>
+          <p>Chercher à supprimer les gaspillages et réorganiser un espace de travail de façon durable.</p>
+        </article>
+        <article class="panel">
+          <h3>Planifier</h3>
+          <p>Découper un projet en lots et en tâches, fixer les jalons et construire un diagramme de Gantt avec ses dépendances.</p>
+        </article>
+        <article class="panel">
+          <h3>Anticiper les risques</h3>
+          <p>Identifier les risques du projet, les classer dans une matrice et prévoir des parades.</p>
+        </article>
+        <article class="panel">
+          <h3>Présenter</h3>
+          <p>Défendre le projet devant un public lors d'une présentation de lancement (kick-off).</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= OUTILS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">06 · OUTILS UTILISÉS</p>
+        <h2>Outils</h2>
+      </header>
+      <div class="tools reveal">
+        <div class="tool"><span class="mono tool-name">Méthode 5M</span><span>Analyse des causes : milieu, moyens, méthodes, main d'œuvre, matière</span></div>
+        <div class="tool"><span class="mono tool-name">5S &amp; Lean</span><span>Réorganisation de l'espace de travail et suppression des gaspillages</span></div>
+        <div class="tool"><span class="mono tool-name">Diagramme de Gantt</span><span>Planification des lots, des tâches, des dépendances et des jalons</span></div>
+        <div class="tool"><span class="mono tool-name">Matrice des risques</span><span>Identification, classement et traitement des risques du projet</span></div>
+        <div class="tool"><span class="mono tool-name">Canva</span><span>Supports de présentation et diagramme de Gantt</span></div>
+      </div>
+    </section>
+
+    <!-- ================= CONCLUSION ================= -->
+    <section class="section wrap case-block">
+      <div class="takeaway reveal">
+        <p class="mono section-num">07 · EN CONCLUSION</p>
+        <p class="lead">Ce projet m'a fait passer de l'autre côté de l'ingénierie : non plus calculer, mais <strong>organiser</strong>. Comprendre un problème industriel dans son ensemble, en trouver les causes et bâtir un plan d'action réaliste avec une équipe.</p>
+        <p class="lead">Une approche que je mets aujourd'hui en pratique dans mon projet de fin d'études avec Air France.</p>
+      </div>
+    </section>
+
+    <nav class="wrap case-nav mono">
+      <a href="pmi-air-france.html">← Planche précédente</a>
+      <a href="../index.html#projets">Toutes les planches →</a>
+    </nav>
+  </main>
+
+  <footer class="footer wrap mono">
+    <span>© 2026 Julie Bodelot</span>
+    <span>PL. 07 · GESTION DE PROJET · RÉV. A</span>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

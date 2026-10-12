@@ -71,6 +71,18 @@ const PROJECTS_EN = [
     date: '2026 – 2027',
     summary: 'Team project for Air France: replacing an Excel/VBA tool with a Power Apps application available to every technician, at Orly and Paris-CDG.',
     tools: ['Power Apps', 'SharePoint', 'Project management']
+  },
+  {
+    id: 'outillage',
+    page: 'projets/gestion-outillage-en.html',
+    thumb: 'assets/projets/gestion-outillage/gantt.png',
+    thumbContain: true,
+    tags: ['project'],
+    kind: 'SCHOOL PROJECT · PROJECT MANAGEMENT',
+    title: 'Reorganising the tooling inventory of an engine maintenance site',
+    date: '2024 – 2025',
+    summary: 'Team case study inspired by Air France Industries: 5M root cause analysis, 5S reorganisation, a dedicated tool store and a five-work-package Gantt plan.',
+    tools: ['5M', '5S / Lean', 'Gantt', 'Risk matrix']
   }
 ];
 
@@ -156,6 +168,18 @@ const PROJECTS_FR = [
     date: '2026 – 2027',
     summary: 'Projet en équipe pour Air France : remplacer un outil Excel/VBA par une application Power Apps accessible à tous les agents, à Orly et à Roissy-CDG.',
     tools: ['Power Apps', 'SharePoint', 'Gestion de projet']
+  },
+  {
+    id: 'outillage',
+    page: 'projets/gestion-outillage.html',
+    thumb: 'assets/projets/gestion-outillage/gantt.png',
+    thumbContain: true,
+    tags: ['project'],
+    kind: 'PROJET ÉCOLE · GESTION DE PROJET',
+    title: 'Réorganiser le parc d’outillage d’un site de maintenance moteur',
+    date: '2024 – 2025',
+    summary: 'Cas d’étude en équipe inspiré d’Air France Industries : analyse des causes 5M, réorganisation 5S, magasin dédié et planification en cinq lots sur un diagramme de Gantt.',
+    tools: ['5M', '5S / Lean', 'Gantt', 'Matrice des risques']
   }
 ];
 
