@@ -96,6 +96,17 @@ const PROJECTS_EN = [
     date: '2025',
     summary: 'CSR analysis of a multinational and its South African subsidiary. As environment lead: life cycle analysis, process tree and eco-design of a product B with the Brezet wheel.',
     tools: ['SDGs', 'ISO 26000', 'Life cycle', 'Brezet wheel']
+  },
+  {
+    id: 'saf',
+    page: 'projets/saf-en.html',
+    thumb: 'assets/projets/saf/conduite-comsol.png',
+    tags: ['research', 'cfd'],
+    kind: 'RESEARCH PROJECT · SAF',
+    title: 'Can a new sustainable fuel help decarbonise aviation?',
+    date: '2026',
+    summary: 'Techno-economic assessment of a multi-feedstock SAF, written as a scientific paper in English: certification, risk analysis and a COMSOL simulation of an A320 fuel line.',
+    tools: ['COMSOL', 'ASTM / CORSIA', 'Risk matrix', 'Scientific writing']
   }
 ];
 
@@ -206,6 +217,17 @@ const PROJECTS_FR = [
     date: '2025',
     summary: 'Analyse RSE d’une multinationale et de sa filiale sud-africaine. En tant que référente environnement : cycle de vie, arbre des processus et éco-conception d’un produit B avec la roue de Brezet.',
     tools: ['ODD', 'ISO 26000', 'Cycle de vie', 'Roue de Brezet']
+  },
+  {
+    id: 'saf',
+    page: 'projets/saf.html',
+    thumb: 'assets/projets/saf/conduite-comsol.png',
+    tags: ['research', 'cfd'],
+    kind: 'PROJET DE RECHERCHE · SAF',
+    title: 'Un nouveau carburant durable peut-il décarboner l’aviation ?',
+    date: '2026',
+    summary: 'Évaluation technico-économique d’un SAF multi-ressources, rédigée sous forme d’article scientifique en anglais : certification, analyse des risques et simulation COMSOL d’une ligne carburant d’A320.',
+    tools: ['COMSOL', 'ASTM / CORSIA', 'Matrice des risques', 'Rédaction scientifique']
   }
 ];
 

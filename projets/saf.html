@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projet de recherche SAF · Julie Bodelot</title>
+  <meta name="description" content="Projet de recherche à l'IPSA : évaluation technico-économique d'un nouveau carburant aviation durable (SAF) multi-ressources, avec une étude CFD sous COMSOL sur la ligne carburant d'un A320.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=202610124">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="logo mono" href="../index.html">JB<span>/</span>AERO</a>
+    <nav class="nav">
+      <a href="../index.html#projets">Projets</a>
+      <a href="../index.html#parcours">Parcours</a>
+      <a href="../index.html#taiwan">Taïwan</a>
+      <a href="../index.html#basket">Basket</a>
+      <a href="../index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+    <a class="lang-switch mono" href="saf-en.html" hreflang="en" lang="en">EN</a>
+    <span class="coords mono" id="coords" aria-hidden="true">X 0000 · Y 0000</span>
+  </header>
+
+  <aside class="altimeter mono" aria-hidden="true">
+    <span>ALT</span>
+    <div class="alt-track"><div class="alt-fill" id="altFill"></div></div>
+    <span id="altValue">00000 ft</span>
+  </aside>
+
+  <main class="case">
+    <!-- ================= EN-TÊTE ================= -->
+    <section class="wrap case-hero">
+      <a class="back mono" href="../index.html#projets">← RETOUR AUX PLANCHES</a>
+      <p class="mono kicker">PL. 09 · PROJET DE RECHERCHE · 4E ANNÉE · 2026</p>
+      <h1 class="case-title">Un nouveau carburant durable peut-il décarboner l'aviation ?</h1>
+      <p class="subtitle case-sub">Évaluation technico-économique d'un carburant aviation durable (SAF) produit à partir de plusieurs ressources, rédigée sous la forme d'un article scientifique en anglais.</p>
+
+      <dl class="factsheet mono">
+        <div><dt>CADRE</dt><dd>Production d'électricité et hydrogène · IPSA</dd></div>
+        <div><dt>FORMAT</dt><dd>Article scientifique en anglais</dd></div>
+        <div><dt>ÉQUIPE</dt><dd>Groupe de 6</dd></div>
+        <div><dt>OUTIL</dt><dd>COMSOL Multiphysics</dd></div>
+      </dl>
+
+      <figure class="case-figure reveal">
+        <img src="../assets/projets/saf/conduite-comsol.png" alt="Simulation COMSOL d'un tronçon de conduite carburant avec ses coudes, coloré selon la résolution de l'écoulement à la paroi" loading="eager">
+        <figcaption class="mono">Simulation sous COMSOL d'un tronçon de la ligne carburant d'un A320, avec ses coudes.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= LE SUJET ================= -->
+    <section class="section wrap case-block">
+      <div class="case-grid reveal">
+        <header>
+          <p class="mono section-num">01 · LE SUJET</p>
+          <h2>Au-delà des promesses de la simulation</h2>
+        </header>
+        <div class="prose">
+          <p>La décarbonation de l'aviation repose en grande partie sur les <strong>carburants aviation durables</strong> (SAF), utilisables dans les avions actuels sans modification majeure. Mais les premières filières dépendent souvent d'une seule ressource, ce qui limite leur déploiement.</p>
+          <p>Nous avons étudié un SAF innovant, produit dans une bioraffinerie hybride à partir de <strong>déchets ménagers, de jatropha et d'effluents d'élevage</strong>. Prometteur sur le papier, il n'existe encore qu'au stade de la simulation.</p>
+          <p>Notre posture : celle d'ingénieurs conseillant la direction d'une compagnie aérienne. Rester objectifs, et évaluer si ce carburant est réellement viable, techniquement, économiquement et réglementairement.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DÉMARCHE ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">02 · LA DÉMARCHE</p>
+        <h2>Une évaluation sous tous les angles</h2>
+      </header>
+      <ol class="pipeline reveal">
+        <li>
+          <span class="step mono">ÉTAPE 1</span>
+          <h3>État de l'art</h3>
+          <p>Les filières de production existantes, leurs ressources, leur maturité et leurs limites.</p>
+        </li>
+        <li>
+          <span class="step mono">ÉTAPE 2</span>
+          <h3>Certification</h3>
+          <p>Le parcours de qualification technique (normes ASTM) et de durabilité (CORSIA, ReFuelEU), traçabilité comprise.</p>
+        </li>
+        <li>
+          <span class="step mono">ÉTAPE 3</span>
+          <h3>Analyse des risques</h3>
+          <p>Ressources, économie, intégration technologique, réglementation et durabilité, synthétisés dans une matrice des risques.</p>
+        </li>
+        <li>
+          <span class="step mono">ÉTAPE 4</span>
+          <h3>Étude technique &amp; économique</h3>
+          <p>Une simulation CFD de l'alimentation carburant d'un A320, puis l'analyse de la viabilité économique de la filière.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= ÉTUDE TECHNIQUE ================= -->
+    <section class="section wrap case-block">
+      <div class="case-grid reveal">
+        <header>
+          <p class="mono section-num">03 · L'ÉTUDE TECHNIQUE</p>
+          <h2>Le carburant arrive-t-il bien jusqu'au moteur ?</h2>
+        </header>
+        <div class="prose">
+          <p>Un SAF peut être chimiquement compatible et pourtant se comporter différemment dans les conduites de l'avion. Nous avons donc modélisé sous <strong>COMSOL</strong> un tronçon de la ligne qui alimente les moteurs d'un A320, avec ses coudes, en écoulement turbulent.</p>
+          <p>Quatre carburants ont été comparés : kérosène pur, deux mélanges et SAF pur. La simulation montre un écoulement légèrement moins favorable avec le SAF, notamment dans les coudes.</p>
+          <p>Nous en avons tiré une solution concrète : ajouter des <strong>pompes de gavage intermédiaires</strong>, installées lors des grandes visites de maintenance. Une adaptation simple et peu coûteuse face au remplacement de la flotte.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= IMAGES ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">04 · EN IMAGES</p>
+        <h2>La simulation sous COMSOL</h2>
+      </header>
+      <div class="figpair reveal">
+        <figure class="case-figure">
+          <img src="../assets/projets/saf/coupes-vitesse.png" alt="Coupes de vitesse le long de la conduite carburant simulée sous COMSOL" loading="lazy">
+          <figcaption class="mono">Coupes de vitesse le long de la conduite.</figcaption>
+        </figure>
+        <figure class="case-figure">
+          <img src="../assets/projets/saf/interface-comsol.png" alt="Interface de COMSOL Multiphysics avec le modèle de la conduite" loading="lazy" style="object-fit: contain; background: #fff;">
+          <figcaption class="mono">Le modèle dans COMSOL : écoulement turbulent, maillage et post-traitement.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= COMPÉTENCES ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">05 · COMPÉTENCES ACQUISES</p>
+        <h2>Ce que ce projet m'a appris</h2>
+      </header>
+      <div class="ideas ideas-3 reveal">
+        <article class="panel">
+          <h3>Recherche scientifique</h3>
+          <p>Exploiter une littérature récente et la synthétiser dans un article structuré, rédigé en anglais.</p>
+        </article>
+        <article class="panel">
+          <h3>Simulation CFD</h3>
+          <p>Modéliser un écoulement turbulent dans une conduite sous COMSOL et comparer plusieurs fluides.</p>
+        </article>
+        <article class="panel">
+          <h3>Certification aéronautique</h3>
+          <p>Comprendre le parcours de qualification d'un nouveau carburant et les cadres de durabilité.</p>
+        </article>
+        <article class="panel">
+          <h3>Analyse des risques</h3>
+          <p>Identifier et classer les risques d'un projet industriel dans une matrice.</p>
+        </article>
+        <article class="panel">
+          <h3>Vision technico-économique</h3>
+          <p>Relier un résultat technique à son coût et à sa faisabilité pour un exploitant.</p>
+        </article>
+        <article class="panel">
+          <h3>Esprit critique</h3>
+          <p>Distinguer ce qu'une simulation promet de ce qui reste à démontrer en conditions réelles.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= OUTILS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">06 · OUTILS UTILISÉS</p>
+        <h2>Outils</h2>
+      </header>
+      <div class="tools reveal">
+        <div class="tool"><span class="mono tool-name">COMSOL Multiphysics</span><span>Écoulement turbulent dans une conduite, maillage, post-traitement des vitesses, pressions et débits</span></div>
+        <div class="tool"><span class="mono tool-name">Matrice des risques</span><span>Synthèse des risques de la filière</span></div>
+        <div class="tool"><span class="mono tool-name">Normes &amp; réglementation</span><span>ASTM D4054 / D7566, CORSIA, ReFuelEU Aviation</span></div>
+        <div class="tool"><span class="mono tool-name">Rédaction scientifique</span><span>Article au format revue, en anglais</span></div>
+      </div>
+    </section>
+
+    <!-- ================= CONCLUSION ================= -->
+    <section class="section wrap case-block">
+      <div class="takeaway reveal">
+        <p class="mono section-num">07 · EN CONCLUSION</p>
+        <p class="lead">Ce projet m'a plongée au cœur d'un enjeu majeur pour mon secteur : <strong>décarboner l'aviation</strong>. J'y ai appris à évaluer une innovation dans toutes ses dimensions, de la simulation à la certification, en passant par les risques et l'économie.</p>
+        <p class="lead">Et surtout à garder un regard objectif : un carburant prometteur en simulation doit encore faire ses preuves dans le monde réel.</p>
+      </div>
+    </section>
+
+    <nav class="wrap case-nav mono">
+      <a href="rse-loreal.html">← Planche précédente</a>
+      <a href="../index.html#projets">Toutes les planches →</a>
+    </nav>
+  </main>
+
+  <footer class="footer wrap mono">
+    <span>© 2026 Julie Bodelot</span>
+    <span>PL. 09 · SAF · RÉV. A</span>
+  </footer>
+
+  <script src="../js/main.js?v=202610124"></script>
+</body>
+</html>

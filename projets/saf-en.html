@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAF research project · Julie Bodelot</title>
+  <meta name="description" content="Research project at IPSA: techno-economic assessment of a novel multi-feedstock sustainable aviation fuel (SAF), with a COMSOL CFD study of an A320 fuel line.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=202610124">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="logo mono" href="../index-en.html">JB<span>/</span>AERO</a>
+    <nav class="nav">
+      <a href="../index-en.html#projects">Projects</a>
+      <a href="../index-en.html#journey">Journey</a>
+      <a href="../index-en.html#taiwan">Taiwan</a>
+      <a href="../index-en.html#basketball">Basketball</a>
+      <a href="../index-en.html#contact" class="nav-cta">Contact</a>
+    </nav>
+    <a class="lang-switch mono" href="saf.html" hreflang="fr" lang="fr">FR</a>
+    <span class="coords mono" id="coords" aria-hidden="true">X 0000 · Y 0000</span>
+  </header>
+
+  <aside class="altimeter mono" aria-hidden="true">
+    <span>ALT</span>
+    <div class="alt-track"><div class="alt-fill" id="altFill"></div></div>
+    <span id="altValue">00000 ft</span>
+  </aside>
+
+  <main class="case">
+    <!-- ================= HEADER ================= -->
+    <section class="wrap case-hero">
+      <a class="back mono" href="../index-en.html#projects">← BACK TO PROJECTS</a>
+      <p class="mono kicker">SH. 09 · RESEARCH PROJECT · 4TH YEAR · 2026</p>
+      <h1 class="case-title">Can a new sustainable fuel help decarbonise aviation?</h1>
+      <p class="subtitle case-sub">Techno-economic assessment of a sustainable aviation fuel (SAF) produced from multiple feedstocks, written as a scientific paper in English.</p>
+
+      <dl class="factsheet mono">
+        <div><dt>CONTEXT</dt><dd>Electricity generation and hydrogen · IPSA</dd></div>
+        <div><dt>FORMAT</dt><dd>Scientific paper in English</dd></div>
+        <div><dt>TEAM</dt><dd>Group of 6</dd></div>
+        <div><dt>TOOL</dt><dd>COMSOL Multiphysics</dd></div>
+      </dl>
+
+      <figure class="case-figure reveal">
+        <img src="../assets/projets/saf/conduite-comsol.png" alt="COMSOL simulation of a fuel pipe section with its bends, coloured by near-wall flow resolution" loading="eager">
+        <figcaption class="mono">COMSOL simulation of a section of an A320 fuel feed line, including its bends.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= THE TOPIC ================= -->
+    <section class="section wrap case-block">
+      <div class="case-grid reveal">
+        <header>
+          <p class="mono section-num">01 · THE TOPIC</p>
+          <h2>Beyond what the simulation promises</h2>
+        </header>
+        <div class="prose">
+          <p>Decarbonising aviation relies heavily on <strong>sustainable aviation fuels</strong> (SAF), which can be used in today's aircraft without major modifications. But first-generation pathways often depend on a single feedstock, which limits their deployment.</p>
+          <p>We studied an innovative SAF produced in a hybrid biorefinery from <strong>municipal solid waste, Jatropha and livestock manure</strong>. Promising on paper, it still only exists at the simulation stage.</p>
+          <p>Our stance: that of engineers advising an airline's management. Stay objective, and assess whether this fuel is truly viable, technically, economically and from a regulatory standpoint.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= APPROACH ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">02 · THE APPROACH</p>
+        <h2>An assessment from every angle</h2>
+      </header>
+      <ol class="pipeline reveal">
+        <li>
+          <span class="step mono">STEP 1</span>
+          <h3>State of the art</h3>
+          <p>Existing production pathways, their feedstocks, maturity and limitations.</p>
+        </li>
+        <li>
+          <span class="step mono">STEP 2</span>
+          <h3>Certification</h3>
+          <p>The technical qualification route (ASTM standards) and sustainability frameworks (CORSIA, ReFuelEU), including traceability.</p>
+        </li>
+        <li>
+          <span class="step mono">STEP 3</span>
+          <h3>Risk analysis</h3>
+          <p>Feedstock, economic, technological integration, regulatory and durability risks, summarised in a risk matrix.</p>
+        </li>
+        <li>
+          <span class="step mono">STEP 4</span>
+          <h3>Technical &amp; economic study</h3>
+          <p>A CFD simulation of an A320's fuel feed, then an analysis of the pathway's economic viability.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ================= TECHNICAL STUDY ================= -->
+    <section class="section wrap case-block">
+      <div class="case-grid reveal">
+        <header>
+          <p class="mono section-num">03 · THE TECHNICAL STUDY</p>
+          <h2>Does the fuel reach the engine properly?</h2>
+        </header>
+        <div class="prose">
+          <p>A SAF can be chemically compatible and still behave differently in the aircraft's pipes. We therefore modelled in <strong>COMSOL</strong> a section of the line that feeds an A320's engines, including its bends, in turbulent flow.</p>
+          <p>Four fuels were compared: pure kerosene, two blends and pure SAF. The simulation shows slightly less favourable flow behaviour with the SAF, especially in the bends.</p>
+          <p>We drew a concrete solution from this: adding <strong>intermediate booster pumps</strong>, installed during heavy maintenance checks. A simple, low-cost adaptation compared with replacing the fleet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= IMAGES ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">04 · IN PICTURES</p>
+        <h2>The COMSOL simulation</h2>
+      </header>
+      <div class="figpair reveal">
+        <figure class="case-figure">
+          <img src="../assets/projets/saf/coupes-vitesse.png" alt="Velocity cross-sections along the fuel pipe simulated in COMSOL" loading="lazy">
+          <figcaption class="mono">Velocity cross-sections along the pipe.</figcaption>
+        </figure>
+        <figure class="case-figure">
+          <img src="../assets/projets/saf/interface-comsol.png" alt="COMSOL Multiphysics interface with the pipe model" loading="lazy" style="object-fit: contain; background: #fff;">
+          <figcaption class="mono">The model in COMSOL: turbulent flow, meshing and post-processing.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">05 · SKILLS GAINED</p>
+        <h2>What this project taught me</h2>
+      </header>
+      <div class="ideas ideas-3 reveal">
+        <article class="panel">
+          <h3>Scientific research</h3>
+          <p>Drawing on recent literature and synthesising it into a structured paper written in English.</p>
+        </article>
+        <article class="panel">
+          <h3>CFD simulation</h3>
+          <p>Modelling turbulent pipe flow in COMSOL and comparing several fluids.</p>
+        </article>
+        <article class="panel">
+          <h3>Aviation certification</h3>
+          <p>Understanding how a new fuel gets qualified and which sustainability frameworks apply.</p>
+        </article>
+        <article class="panel">
+          <h3>Risk analysis</h3>
+          <p>Identifying and ranking the risks of an industrial project in a matrix.</p>
+        </article>
+        <article class="panel">
+          <h3>Techno-economic view</h3>
+          <p>Linking a technical result to its cost and feasibility for an operator.</p>
+        </article>
+        <article class="panel">
+          <h3>Critical thinking</h3>
+          <p>Separating what a simulation promises from what still has to be proven in real conditions.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= TOOLS ================= -->
+    <section class="section wrap case-block">
+      <header class="section-head reveal">
+        <p class="mono section-num">06 · TOOLS USED</p>
+        <h2>Tools</h2>
+      </header>
+      <div class="tools reveal">
+        <div class="tool"><span class="mono tool-name">COMSOL Multiphysics</span><span>Turbulent pipe flow, meshing, post-processing of velocities, pressures and flow rates</span></div>
+        <div class="tool"><span class="mono tool-name">Risk matrix</span><span>Summary of the pathway's risks</span></div>
+        <div class="tool"><span class="mono tool-name">Standards &amp; regulation</span><span>ASTM D4054 / D7566, CORSIA, ReFuelEU Aviation</span></div>
+        <div class="tool"><span class="mono tool-name">Scientific writing</span><span>Journal-style paper, in English</span></div>
+      </div>
+    </section>
+
+    <!-- ================= CONCLUSION ================= -->
+    <section class="section wrap case-block">
+      <div class="takeaway reveal">
+        <p class="mono section-num">07 · CONCLUSION</p>
+        <p class="lead">This project immersed me in a major challenge for my industry: <strong>decarbonising aviation</strong>. I learned to assess an innovation in all its dimensions, from simulation to certification, through risks and economics.</p>
+        <p class="lead">And above all to stay objective: a fuel that looks promising in simulation still has to prove itself in the real world.</p>
+      </div>
+    </section>
+
+    <nav class="wrap case-nav mono">
+      <a href="rse-loreal-en.html">← Previous project</a>
+      <a href="../index-en.html#projects">All projects →</a>
+    </nav>
+  </main>
+
+  <footer class="footer wrap mono">
+    <span>© 2026 Julie Bodelot</span>
+    <span>SH. 09 · SAF · REV. A</span>
+  </footer>
+
+  <script src="../js/main.js?v=202610124"></script>
+</body>
+</html>
