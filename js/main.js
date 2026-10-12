@@ -87,7 +87,7 @@ const PROJECTS_EN = [
   {
     id: 'rse',
     page: 'projets/rse-loreal-en.html',
-    thumb: 'assets/projets/rse-loreal/roue-brezet.jpg',
+    thumb: 'assets/projets/rse-loreal/cycle-de-vie.jpg',
     thumbContain: true,
     thumbBg: '#0099b3',
     tags: ['csr'],
@@ -197,7 +197,7 @@ const PROJECTS_FR = [
   {
     id: 'rse',
     page: 'projets/rse-loreal.html',
-    thumb: 'assets/projets/rse-loreal/roue-brezet.jpg',
+    thumb: 'assets/projets/rse-loreal/cycle-de-vie.jpg',
     thumbContain: true,
     thumbBg: '#0099b3',
     tags: ['csr'],
