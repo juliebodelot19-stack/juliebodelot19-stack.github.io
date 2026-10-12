@@ -83,6 +83,19 @@ const PROJECTS_EN = [
     date: '2025',
     summary: 'Team case study inspired by Air France Industries: 5M root cause analysis, 5S reorganisation, a dedicated tool store and a five-work-package Gantt plan.',
     tools: ['5M', '5S / Lean', 'Gantt', 'Risk matrix']
+  },
+  {
+    id: 'rse',
+    page: 'projets/rse-loreal-en.html',
+    thumb: 'assets/projets/rse-loreal/roue-brezet.jpg',
+    thumbContain: true,
+    thumbBg: '#0099b3',
+    tags: ['csr'],
+    kind: 'SCHOOL PROJECT · CSR',
+    title: 'Rethinking a L’Oréal product for South Africa by 2030',
+    date: '2025',
+    summary: 'CSR analysis of a multinational and its South African subsidiary. As environment lead: life cycle analysis, process tree and eco-design of a product B with the Brezet wheel.',
+    tools: ['SDGs', 'ISO 26000', 'Life cycle', 'Brezet wheel']
   }
 ];
 
@@ -180,6 +193,19 @@ const PROJECTS_FR = [
     date: '2025',
     summary: 'Cas d’étude en équipe inspiré d’Air France Industries : analyse des causes 5M, réorganisation 5S, magasin dédié et planification en cinq lots sur un diagramme de Gantt.',
     tools: ['5M', '5S / Lean', 'Gantt', 'Matrice des risques']
+  },
+  {
+    id: 'rse',
+    page: 'projets/rse-loreal.html',
+    thumb: 'assets/projets/rse-loreal/roue-brezet.jpg',
+    thumbContain: true,
+    thumbBg: '#0099b3',
+    tags: ['csr'],
+    kind: 'PROJET ÉCOLE · RSE',
+    title: 'Repenser un produit L’Oréal pour l’Afrique du Sud à l’horizon 2030',
+    date: '2025',
+    summary: 'Analyse RSE d’une multinationale et de sa filiale sud-africaine. En tant que référente environnement : cycle de vie, arbre des processus et éco-conception d’un produit B avec la roue de Brezet.',
+    tools: ['ODD', 'ISO 26000', 'Cycle de vie', 'Roue de Brezet']
   }
 ];
 
