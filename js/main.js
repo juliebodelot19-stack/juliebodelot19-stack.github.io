@@ -80,7 +80,7 @@ const PROJECTS_EN = [
     tags: ['project'],
     kind: 'SCHOOL PROJECT · PROJECT MANAGEMENT',
     title: 'Reorganising the tooling inventory of an engine maintenance site',
-    date: '2024 – 2025',
+    date: '2025',
     summary: 'Team case study inspired by Air France Industries: 5M root cause analysis, 5S reorganisation, a dedicated tool store and a five-work-package Gantt plan.',
     tools: ['5M', '5S / Lean', 'Gantt', 'Risk matrix']
   }
@@ -177,7 +177,7 @@ const PROJECTS_FR = [
     tags: ['project'],
     kind: 'PROJET ÉCOLE · GESTION DE PROJET',
     title: 'Réorganiser le parc d’outillage d’un site de maintenance moteur',
-    date: '2024 – 2025',
+    date: '2025',
     summary: 'Cas d’étude en équipe inspiré d’Air France Industries : analyse des causes 5M, réorganisation 5S, magasin dédié et planification en cinq lots sur un diagramme de Gantt.',
     tools: ['5M', '5S / Lean', 'Gantt', 'Matrice des risques']
   }
